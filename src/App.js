@@ -1,16 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Papa from 'papaparse';
 
-const url = "https://docs.google.com/spreadsheets/d/1sCS8U7wHxJlir6CNmV2RuVI490eoRcyXnvVesXQnBUI/gviz/tq?tqx=out:csv&gid=0"
+const url = "https://docs.google.com/spreadsheets/d/1sCS8U7wHxJlir6CNmV2RuVI490eoRcyXnvVesXQnBUI/gviz/tq?tqx=out:csv&gid=0";
+
 function App() {
-  const [data, setData] = React.useState([]);
-  const [loading, setLoading] = React.useState(true); // Estado de carregamento
-  const [error, setError] = React.useState(null); // Estado de erro
+  // Estados
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  React.useEffect(() => {
-    console.log('fetch data !');
+  // Função de clique
+  function atualizar() {
+    window.location.reload();
+    alert("Bem-vindo!")
+}
 
+  // useEffect para configurar o botão
+  useEffect(() => {
+    const button = document.getElementById('logo');
+
+    if (button) {
+      button.onclick = atualizar;
+    }
+
+    return () => {
+      if (button) {
+        button.onclick = null; // Remove o evento de clique
+      }
+    };
+  }, []);
+
+  // useEffect para buscar dados
+  useEffect(() => {
     const fetchData = async () => {
+      console.log('fetch data !');
       try {
         const response = await fetch(url);
         const text = await response.text();
@@ -18,15 +41,15 @@ function App() {
         setData(parsedData.data);
       } catch (err) {
         console.error(err);
-        setError(err.message); // Define a mensagem de erro
+        setError(err.message);
       } finally {
-        setLoading(false); // Define o carregamento como false
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
-  
+
   // Mensagem de carregamento
   if (loading) {
     return <div>Carregando...</div>;
@@ -36,10 +59,12 @@ function App() {
   if (error) {
     return <div>Erro: {error}</div>;
   }
-  console.log(data)
-  return (
-    
+
+  // Exibindo os dados
+  /*return (
     <div className="App">
+      <h1>Meus Dados</h1>
+      <button id="meuBotao">Clique aqui!</button>
       {data.length === 0 ? (
         <div>Nenhum dado encontrado.</div>
       ) : (
@@ -63,8 +88,8 @@ function App() {
         </table>
       )}
     </div>
-  );
+  );*/
+  
 }
 
 export default App;
-

@@ -24,7 +24,7 @@ function Destaque(livros) {
         lista.push(cont)
         let id = "top" + cont; // Gera o ID
         let top1 = document.getElementById(id); // Obtém o elemento pelo ID
-        mensagem = "Mensagem "+ cont;
+        
         if (top1) {
              // Verifica se o elemento existe
             let img1 = document.createElement('img');
@@ -34,9 +34,9 @@ function Destaque(livros) {
             top1.appendChild(img1);
             top1.appendChild(titulo1);
             console.log(cont)
-            Numero = " "+cont
+            
             top1.onclick = function() {
-            Livro(Numero, item);};
+            Livro( item);};
         } else {
             console.warn(`Elemento com ID "${id}" não encontrado.`);
         }
@@ -47,16 +47,16 @@ function Destaque(livros) {
 }
 
 function atualizar() {
-    location.reload();
+    window.location.reload();
 }
 function pesquisar(){
     limpar()
     document.getElementById('pesquisa').value = '';
 }
 
-function Livro(cot, ...item){
+function Livro(...item){
     console.log(item)
-    alert(cot)
+
     
 } 
 
