@@ -38,6 +38,7 @@ function App() {
   }
   console.log(data)
   return (
+    
     <div className="App">
       {data.length === 0 ? (
         <div>Nenhum dado encontrado.</div>
