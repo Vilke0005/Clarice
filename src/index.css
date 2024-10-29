@@ -147,21 +147,19 @@ hr {
 }
 
 .livro {
-    border: 1px solid #ccc; 
-    border-radius: 8px; 
-    padding: 16px; 
-    width: 150px; /* Largura fixa para cada livro */
-    text-align: center; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    background-color: white; /* Fundo branco para os livros */
-    transition: transform 0.2s; /* Transição suave para efeitos de hover */
-    flex: 0 1 auto; /* Permite que os livros se ajustem dentro do contêiner */
-}
+        margin: 10px 0 10px 30px;
+        padding: 10px;
+        display: inline-block; /* ou block, dependendo do layout desejado */
+        width: 200px;
+        background-color: white;
+        border: white;
+        border-radius: 15px;
+    }
 
 /* Para que a imagem ocupe o espaço disponível dentro do livro */
 .livro img {
-    max-width: 100%; 
-    height: auto; 
-    border-radius: 4px; 
-    margin-bottom: 10px; /* Margem abaixo da imagem */
+    display: block; /* Garante que a imagem não fique inline */
+    margin: 0 auto; /* Centraliza a imagem */
+    max-width: 200px; /* Ajuste o tamanho máximo conforme necessário */
+
 }
