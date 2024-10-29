@@ -51,12 +51,15 @@ window.onload = function() {
         imagem.innerHTML = `<img src="${Timagem}" alt="" />`
         titulo.innerHTML= `<h3>Autor: ${Tautor}</h3>`
         informacoes.innerHTML =`<h2 id="titulo2">Informações
+        <hr>
         <h3>Autor: ${Tautor}</h3>
         <h3>Genero: ${Tgenero}</h3>
         <br>
         <h3 id="descricao">Descrição</h3>
+        <hr>
         <p id="textos">${Tdescricao}
         <h2 id="titulo3">Informações de emprestimo</h2>
+        <hr>
         <h3>Exemplares: ${exemplares}</h3>
         <h3>Emprestados: ${emprestados}</h3>
         <h3>Disponivel para emprestimo: ${disponivel}</h3>`
