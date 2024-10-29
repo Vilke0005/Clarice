@@ -60,12 +60,31 @@ function App() {
     });
 }
 
-  function Livro(...item){
-    console.log(item)
-    alert("fucional")
-    
-    
-  } 
+function Livro(item) {
+  // Exibe o objeto para depuração
+  console.log(item); // Verifique a estrutura do objeto
+
+  // Cria um objeto URLSearchParams
+  const params = new URLSearchParams();
+
+  // Adiciona cada propriedade do item como um parâmetro individualmente
+  params.append("titulo", item["TÍTULO"] || '');
+  params.append("autor", item["AUTOR"] || '');
+  params.append("imagem", item["IMAGEM"] || '');
+  params.append("descricao", item["DESCRIÇÃO"] || '');
+  params.append("devolucao", item["DEVOLUÇÃO"] || '');
+  params.append("emprestados", item["EMPRESTADOS"] || '');
+  params.append("exemplares", item["EXEMPLARES"] || '');
+  params.append("genero", item["GÊNERO"] || '');
+  params.append("situacao", item["SITUAÇÃO"] || '');
+  params.append("v_v", item["v v"] || ''); // Note que estamos usando "_" para evitar problemas com espaços
+
+  // Redireciona para a página livro.html com os parâmetros
+  window.location.href = 'livro.html?' + params.toString();
+}
+
+
+
 
   // useEffect para buscar dados
   useEffect(() => {
@@ -111,35 +130,7 @@ function App() {
   if (error) {
     return <div>Erro: {error}</div>;
   }
-
-  /*return (
-    <div className="App">
-      <h1>Meus Dados</h1>
-      <button id="logo">Clique aqui!</button>
-      {data.length === 0 ? (
-        <div>Nenhum dado encontrado.</div>
-      ) : (
-        <table>
-          <thead>
-            <tr>
-              {Object.keys(data[0]).map((key) => (
-                <th key={key}>{key}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((Pessoa, index) => (
-              <tr key={index}>
-                {Object.values(Pessoa).map((value, valueIndex) => (
-                  <td key={valueIndex}>{value}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-    </div>
-  );*/
+  
 }
 
 export default App;
