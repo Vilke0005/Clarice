@@ -120,9 +120,27 @@ hr {
     width: 40%;
     max-height: 50%;
 }
-#titulo2, #descricao {
+#titulo2, #descricao, #titulo3{
     text-align: center;
-    
-
 }
 
+#disponivel {
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    width: 40%;
+    text-align: center;
+    background-color: #1bc296;
+    padding-bottom: 5px;
+}
+
+#indisponivel {
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    height: 6%;
+    width: 40%;
+    text-align: center;
+    background-color: rgb(230, 112, 44);
+    
+}

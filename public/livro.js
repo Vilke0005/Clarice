@@ -18,9 +18,10 @@ function getQueryParams() {
     return params;
 }
 
+
 window.onload = function() {
     const livroItem = getQueryParams();
-
+    
     if (livroItem) {
         var imagem = document.getElementById("imagem")
         var titulo =document.getElementById("titulo")
@@ -29,15 +30,39 @@ window.onload = function() {
         var Timagem = espacos(livroItem["imagem"])
         var Tdescricao = espacos(livroItem["descricao"])
         var Tgenero =espacos(livroItem["genero"])
+        var Tautor = espacos(livroItem["autor"])
+        var exemplares = +livroItem["exemplares"] || 0;
+        var emprestados = +livroItem["emprestados"]
+        var InforEmprestino =document.getElementById("informacoesEmprestimo")
+        
+        var disponivel = exemplares-emprestados;
+        if (disponivel<=0){
+            disponivel = 0
+            emprestimo.innerHTML = `<h3 id="indisponivel">Indisponivel</h3>`
+        } else if (disponivel>0){
+            emprestimo.innerHTML = `<h3 id="disponivel">Disponivel</h3>`
+        }
+        else {
+            emprestimo.innerHTML = `<h3 id="disponivel">Erro</h3>`
+        }
+
+        
 
         imagem.innerHTML = `<img src="${Timagem}" alt="" />`
-        titulo.innerHTML= `<h3>Autor: ${livroItem["autor"]}</h3>`
+        titulo.innerHTML= `<h3>Autor: ${Tautor}</h3>`
         informacoes.innerHTML =`<h2 id="titulo2">Informações
-        <h3>Autor: ${livroItem["autor"]}</h3>
-        <h3>Genero: ${livroItem["genero"]}</h3>
+        <h3>Autor: ${Tautor}</h3>
+        <h3>Genero: ${Tgenero}</h3>
         <br>
         <h3 id="descricao">Descrição</h3>
-        <p id="textos">${Tdescricao}`
+        <p id="textos">${Tdescricao}
+        <h2 id="titulo3">Informações de emprestimo</h2>
+        <h3>Exemplares: ${exemplares}</h3>
+        <h3>Emprestados: ${emprestados}</h3>
+        <h3>Disponivel para emprestimo: ${disponivel}</h3>`
+        InforEmprestino.innerHTML = `
+        `
+        
 
         
     } else {
