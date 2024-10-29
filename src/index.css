@@ -133,4 +133,24 @@ hr {
     width: 240px;
     padding: 0 6px;
 }
+.livro {
+    border: 1px solid #ccc; /* Borda leve */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 10px; /* Espaçamento interno */
+    width: 150px; /* Largura fixa */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
 
+/* Estilo para a imagem do livro */
+.imagem-livro {
+    max-width: 100%; /* Para que a imagem não ultrapasse o container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Arredonda a imagem */
+}
+
+/* Estilo para o título do livro */
+.titulo-livro {
+    font-size: 1.1em; /* Tamanho da fonte */
+    margin: 10px 0 0; /* Margem acima do título */
+}
