@@ -138,7 +138,7 @@ hr {
 #resultado {
     display: flex; 
     flex-wrap: wrap; 
-    justify-content: flex-end; /* Para garantir que os livros comecem na linha */
+    justify-content: flex-end; /* Para garantir que os livros comecem na li*/
     gap: 16px; 
     padding: 10px; /* Padding para evitar que os livros toquem as bordas */
     margin-top: 80px;
