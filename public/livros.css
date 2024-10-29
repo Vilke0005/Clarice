@@ -1,0 +1,128 @@
+body{
+    margin: 0%;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(#79e4a6, #1bc296);
+    height: 120vh;
+}
+img {
+    left: 10%;
+    top: 3%;
+    width: 80%;
+    height: 80%;
+    border-radius: 8px;
+    margin-top: 4px;
+}
+hr {
+    position: relative;
+    top: 8%;
+    border: none; /* Remove a borda padrão */
+    height: 2px; /* Altura da linha */
+    background-color: #333; /* Cor da linha */
+    margin: 20px 0; /* Margem acima e abaixo */
+}
+#logo {
+    position: absolute;
+    border-radius: 20%;
+    left: 6%;
+    top: 1%;
+    width: 60px;
+    height: 70px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Efeito de transição */
+}
+
+#logo:hover {
+    transform: scale(1.05); /* Aumenta o tamanho da imagem */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.barra{
+    position: absolute;
+    top: 05%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    background: #0a1b2d;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+::-webkit-input-placeholder{
+    color: #1e3754;
+}
+
+.pesquisa{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0%;
+    color: #f0f5fb;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: 0.5s;
+}
+
+.botaopesquisa{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0a1b2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.barra:hover > .pesquisa{
+    width: 240px;
+    padding: 0 6px;
+}
+
+#imagem {
+    position: absolute;
+    left: 5%;
+    top: 13%;
+    width: 40%;
+    height: 50%;
+    background-color: black;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5)
+    
+}
+#imagem img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+
+#titulo {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    width: 40%;
+    text-align: center;
+    background-color: #1bc296;
+    
+
+    border-radius: 5%;
+
+}
+
+#informacoes {
+    position: absolute;
+    top: 13%;
+    right: 5%;
+    width: 40%;
+    max-height: 50%;
+}
+#titulo2, #descricao {
+    text-align: center;
+    
+
+}
+
