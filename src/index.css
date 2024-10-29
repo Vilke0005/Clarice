@@ -39,17 +39,19 @@ hr {
     text-align: center;
     position: absolute;
     width: 15%;
-    height: 40%;
+    height: 45%;
     background-color: white;
     border-radius: 6px;
     margin-top: 5px;
     top: 2%;
     border: 1px solid #ccc;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3)
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
 }
 #top1 {
     top: 13%;
     left: 4%;
+
 }
 #top2 {
     top: 13%;
@@ -133,24 +135,33 @@ hr {
     width: 240px;
     padding: 0 6px;
 }
+#resultado {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: flex-end; /* Para garantir que os livros comecem na linha */
+    gap: 16px; 
+    padding: 10px; /* Padding para evitar que os livros toquem as bordas */
+    margin-top: 80px;
+    width: 100%; /* Certifique-se de que ocupa a largura total */
+    max-width: 1200px; /* Limita a largura máxima, se necessário */ /* Espaço acima dos resultados */
+}
+
 .livro {
-    border: 1px solid #ccc; /* Borda leve */
-    border-radius: 5px; /* Cantos arredondados */
-    padding: 10px; /* Espaçamento interno */
-    width: 150px; /* Largura fixa */
-    text-align: center; /* Centraliza o texto */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    padding: 16px; 
+    width: 150px; /* Largura fixa para cada livro */
+    text-align: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background-color: white; /* Fundo branco para os livros */
+    transition: transform 0.2s; /* Transição suave para efeitos de hover */
+    flex: 0 1 auto; /* Permite que os livros se ajustem dentro do contêiner */
 }
 
-/* Estilo para a imagem do livro */
-.imagem-livro {
-    max-width: 100%; /* Para que a imagem não ultrapasse o container */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 5px; /* Arredonda a imagem */
-}
-
-/* Estilo para o título do livro */
-.titulo-livro {
-    font-size: 1.1em; /* Tamanho da fonte */
-    margin: 10px 0 0; /* Margem acima do título */
+/* Para que a imagem ocupe o espaço disponível dentro do livro */
+.livro img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 4px; 
+    margin-bottom: 10px; /* Margem abaixo da imagem */
 }
