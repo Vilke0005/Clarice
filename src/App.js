@@ -8,10 +8,53 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+//atualizar
+
   function atualizar() {
     window.location.reload();
     alert("Bem-vindo!");
   }
+
+//pesquisar
+
+function pesquisar() {
+  const termo = document.getElementById("pesquisa").value.toLowerCase();
+  const resultadoDiv = document.getElementById("resultado");
+  const livrosDestaqueDiv = document.getElementById("livrosDestaque");
+
+  // Limpa o resultado anterior
+  resultadoDiv.innerHTML = "";
+  livrosDestaqueDiv.innerHTML = "";
+
+  // Filtra os livros com base no título
+  const resultadosFiltrados = data.filter((livro) =>
+      livro["TÍTULO"] && livro["TÍTULO"].toLowerCase().includes(termo)
+  );
+
+  // Exibe os resultados filtrados
+  if (resultadosFiltrados.length > 0) {
+      resultadosFiltrados.forEach((livro) => {
+          const livroDiv = document.createElement("div");
+          livroDiv.className = "livro"; // Adiciona uma classe para estilização
+
+          const titulo = document.createElement("h3");
+          titulo.className = "titulo-livro"; // Classe para o título
+          titulo.textContent = livro["TÍTULO"];
+
+          const imagem = document.createElement("img");
+          imagem.className = "imagem-livro"; // Classe para a imagem
+          imagem.src = livro.IMAGEM;
+
+          livroDiv.appendChild(imagem);
+          livroDiv.appendChild(titulo);
+          livrosDestaqueDiv.appendChild(livroDiv);
+      });
+  } else {
+      resultadoDiv.textContent = "Nenhum resultado encontrado.";
+  }
+}
+
+
   function Destaque(livros) {
     // Ordena os livros pela propriedade 'v v' (com espaço)
     livros.sort((a, b) => b["v v"] - a["v v"]);
@@ -111,6 +154,11 @@ function Livro(item) {
     if (!loading) {
       Destaque(data)
       const button = document.getElementById('logo');
+      const pesquisar = document.getElementById("pesquisa");
+      if (pesquisar){
+        pesquisar.onclick = pesquisar;
+      }
+
       if (button) {
         button.onclick = atualizar;
       }
@@ -118,6 +166,9 @@ function Livro(item) {
       return () => {
         if (button) {
           button.onclick = null;
+        }
+        if(pesquisar) {
+          pesquisar.onclick = null;
         }
       };
     }
@@ -130,7 +181,10 @@ function Livro(item) {
   if (error) {
     return <div>Erro: {error}</div>;
   }
-  
+
+
+
+  window.pesquisar = pesquisar;
 }
 
 export default App;
