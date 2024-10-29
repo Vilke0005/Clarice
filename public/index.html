@@ -23,16 +23,19 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!---->
-    <div class="barra">
+    <div class="topo">      
+      <div class="barra">
       <input type="text" class="pesquisa" placeholder="Pesquisar" id="pesquisa" name="termo">
-      <button class="botaopesquisa" onclick="pesquisar()">
+      <a class="botaopesquisa" onclick="pesquisar()">
           <img src="lupa.svg" alt="Lupa" height="70%" width="70%">
-
       </a>
+    </div>
+    <img id="logo"src="logo.png">
+
   </div>
   <hr>
   <div id="resultado"></div>
-  <img id="logo"src="logo.png" >
+ 
   <div id="livrosDestaque" >
       <div id="top1"></div>
       <div id="top2"></div>
