@@ -62,7 +62,8 @@ function App() {
 
   function Livro(...item){
     console.log(item)
-  alert("fucional")
+    alert("fucional")
+    
     
   } 
 
