@@ -68,12 +68,9 @@ function pesquisar() {
   function Destaque(livros) {
     
     
-    // Ordena os livros pela propriedade 'v v' (com espaço)
-    livros.sort(() => Math.random() - 0.5);
-
-
     
-    // Seleciona os 10 primeiros livros após a ordenação
+    livros.sort(() => Math.random() - 0.5);
+    
     const destacados = livros.slice(0, 10);
     
     console.log("Livros destacados:", destacados);
