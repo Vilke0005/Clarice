@@ -44,7 +44,7 @@ window.onload = function() {
         var Tgenero =espacos(livroItem["genero"])
         var Tautor = espacos(livroItem["autor"])
         var exemplares = +livroItem["exemplares"] || 0;
-        var emprestados = +livroItem["emprestados"]
+        var emprestados = +livroItem["emprestados"] || 0;
         var TTitulo = espacos(livroItem["titulo"])
         var InforEmprestino =document.getElementById("informacoesEmprestimo")
         
