@@ -45,6 +45,7 @@ window.onload = function() {
         var Tautor = espacos(livroItem["autor"])
         var exemplares = +livroItem["exemplares"] || 0;
         var emprestados = +livroItem["emprestados"]
+        var TTitulo = espacos(livroItem["titulo"])
         var InforEmprestino =document.getElementById("informacoesEmprestimo")
         
         var disponivel = exemplares-emprestados;
@@ -64,6 +65,7 @@ window.onload = function() {
         titulo.innerHTML= `<h3>Autor: ${Tautor}</h3>`
         informacoes.innerHTML =`<h2 id="titulo2">Informações
         <hr>
+        <h3>Titulo: ${TTitulo}</h3>
         <h3>Autor: ${Tautor}</h3>
         <h3>Genero: ${Tgenero}</h3>
         <br>
