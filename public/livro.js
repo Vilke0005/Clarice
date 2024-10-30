@@ -8,8 +8,20 @@ const stringOriginal = "Este+é+um+exemplo+de+string+com+caracteres+de+mais.";
 const stringModificada = espacos(stringOriginal);
 
 console.log(stringModificada); // Saída: "Este é um exemplo de string com caracteres de mais."
+function carregarCSS() {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "livroR.css"; // Substitua pelo caminho correto
+    link.type = "text/css";
+
+    document.head.appendChild(link); // Adiciona o link ao head
+}
+
+// Chame a função para carregar o CSS
+carregarCSS();
 
 function getQueryParams() {
+    carregarCSS()
     const params = {};
     window.location.search.substring(1).split("&").forEach(param => {
         const [key, value] = param.split("=");
