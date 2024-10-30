@@ -8,8 +8,20 @@ const stringOriginal = "Este+é+um+exemplo+de+string+com+caracteres+de+mais.";
 const stringModificada = espacos(stringOriginal);
 
 console.log(stringModificada); // Saída: "Este é um exemplo de string com caracteres de mais."
+function carregarCSS() {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "livroR.css"; // Substitua pelo caminho correto
+    link.type = "text/css";
+
+    document.head.appendChild(link); // Adiciona o link ao head
+}
+
+// Chame a função para carregar o CSS
+carregarCSS();
 
 function getQueryParams() {
+    carregarCSS()
     const params = {};
     window.location.search.substring(1).split("&").forEach(param => {
         const [key, value] = param.split("=");
@@ -32,7 +44,8 @@ window.onload = function() {
         var Tgenero =espacos(livroItem["genero"])
         var Tautor = espacos(livroItem["autor"])
         var exemplares = +livroItem["exemplares"] || 0;
-        var emprestados = +livroItem["emprestados"]
+        var emprestados = +livroItem["emprestados"] || 0;
+        var TTitulo = espacos(livroItem["titulo"])
         var InforEmprestino =document.getElementById("informacoesEmprestimo")
         
         var disponivel = exemplares-emprestados;
@@ -52,6 +65,7 @@ window.onload = function() {
         titulo.innerHTML= `<h3>Autor: ${Tautor}</h3>`
         informacoes.innerHTML =`<h2 id="titulo2">Informações
         <hr>
+        <h3>Titulo: ${TTitulo}</h3>
         <h3>Autor: ${Tautor}</h3>
         <h3>Genero: ${Tgenero}</h3>
         <br>

@@ -33,10 +33,14 @@ function pesquisar() {
 
   // Exibe os resultados filtrados
   if (resultadosFiltrados.length > 0) {
+      var cont = 1
       resultadosFiltrados.forEach((livro) => {
           const livroDiv = document.createElement("div");
           livroDiv.className = "livro"; // Adiciona uma classe para estilização
-
+          livroDiv.id = "livro"+cont
+          
+          
+          
           const titulo = document.createElement("h3");
           titulo.className = "titulo-livro"; // Classe para o título
           titulo.textContent = livro["TÍTULO"];
@@ -44,10 +48,16 @@ function pesquisar() {
           const imagem = document.createElement("img");
           imagem.className = "imagem-livro"; // Classe para a imagem
           imagem.src = livro.IMAGEM;
-
+          
           livroDiv.appendChild(imagem);
           livroDiv.appendChild(titulo);
+          
           livrosDestaqueDiv.appendChild(livroDiv);
+          var identifi = "livro"+cont
+          var elemento = document.getElementById(identifi)
+          elemento.onclick = function() {
+            Livro(livro)}
+          cont ++
       });
   } else {
       resultadoDiv.textContent = "Nenhum resultado encontrado.";
@@ -57,7 +67,8 @@ function pesquisar() {
 
   function Destaque(livros) {
     // Ordena os livros pela propriedade 'v v' (com espaço)
-    livros.sort((a, b) => b["v v"] - a["v v"]);
+    livros.sort(() => Math.random() - 0.5);
+
     
     // Seleciona os 10 primeiros livros após a ordenação
     const destacados = livros.slice(0, 10);
