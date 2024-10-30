@@ -43,7 +43,7 @@ function pesquisar() {
           
           const titulo = document.createElement("h3");
           titulo.className = "titulo-livro"; // Classe para o título
-          titulo.textContent = livro["TÍTULO"];
+          titulo.textContent = livro["TÍTULO "];
 
           const imagem = document.createElement("img");
           imagem.className = "imagem-livro"; // Classe para a imagem
