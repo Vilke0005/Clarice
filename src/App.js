@@ -66,8 +66,10 @@ function pesquisar() {
 
 
   function Destaque(livros) {
+    
     // Ordena os livros pela propriedade 'v v' (com espaço)
     livros.sort(() => Math.random() - 0.5);
+
 
     
     // Seleciona os 10 primeiros livros após a ordenação
@@ -158,10 +160,10 @@ function Livro(item) {
 
     fetchData();
   }, []);
-
+  
   // useEffect para configurar o botão apenas após o carregamento
   useEffect(() => {
-    console.log(data)
+    
     if (!loading) {
       Destaque(data)
       const button = document.getElementById('logo');

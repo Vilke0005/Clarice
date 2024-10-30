@@ -101,10 +101,10 @@
     
     #indisponivel {
         position: absolute;
-        top: 105%;
+        top: 100%;
         left: 5%;
-        height: 6%;
-        width: 40%;
+    
+        width: 90%;
         text-align: center;
         background-color: rgb(230, 112, 44);
         
