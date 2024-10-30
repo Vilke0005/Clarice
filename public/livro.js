@@ -50,6 +50,7 @@ window.onload = function() {
         var InforEmprestino =document.getElementById("informacoesEmprestimo")
         
         var disponivel = exemplares-emprestados;
+        console.log(disponivel)
         if (disponivel<=0){
             disponivel = 0
             emprestimo.innerHTML = `<h3 id="indisponivel">Indisponivel</h3>`
