@@ -67,6 +67,7 @@ function pesquisar() {
 
   function Destaque(livros) {
     
+    
     // Ordena os livros pela propriedade 'v v' (com espaço)
     livros.sort(() => Math.random() - 0.5);
 
@@ -86,7 +87,7 @@ function pesquisar() {
         
         // Cria o elemento de título e define seu conteúdo
         const tituloElem = document.createElement('h3');
-        tituloElem.textContent = item["TÍTULO"]; // Acessando a propriedade "TÍTULO" com colchetes
+        tituloElem.textContent = item["TÍTULO "]; // Acessando a propriedade "TÍTULO" com colchetes
         
         // Gera o ID e obtém o elemento pelo ID
         const id = "top" + cont;
@@ -103,7 +104,7 @@ function pesquisar() {
             topElem.appendChild(imgElem);
             topElem.appendChild(tituloElem);
             console.log(`Adicionado ao ID "${id}": ${item.TÍTULO}`);
-            
+            console.log(item)
             // Adiciona um evento de clique ao elemento
             topElem.onclick = function() {
                 Livro(item); // Presumindo que 'Livro' é uma função definida em outro lugar
@@ -117,6 +118,7 @@ function pesquisar() {
 }
 
 function Livro(item) {
+  
   // Exibe o objeto para depuração
   console.log(item); // Verifique a estrutura do objeto
 
@@ -124,7 +126,7 @@ function Livro(item) {
   const params = new URLSearchParams();
 
   // Adiciona cada propriedade do item como um parâmetro individualmente
-  params.append("titulo", item["TÍTULO"] || '');
+  params.append("titulo", item["TÍTULO "] || '');
   params.append("autor", item["AUTOR"] || '');
   params.append("imagem", item["IMAGEM"] || '');
   params.append("descricao", item["DESCRIÇÃO"] || '');
@@ -144,6 +146,7 @@ function Livro(item) {
 
   // useEffect para buscar dados
   useEffect(() => {
+    console.log(data)
     const fetchData = async () => {
       try {
         const response = await fetch(url);
