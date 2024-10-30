@@ -1,5 +1,5 @@
 
-@media (min-height: 360px) {
+@media (min-height: 344px) {
     @media (max-width: 999px){
     body {
         margin: 0%;
@@ -29,8 +29,8 @@
         border-radius: 20%;
         left: 6%;
         top: 1%;
-        width: 13%;
-        height: 10%;
+        width: 10%;
+        height: 8%;
         transition: transform 0.3s, box-shadow 0.3s; /* Efeito de transição */
     }
     
