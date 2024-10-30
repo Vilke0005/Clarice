@@ -45,6 +45,7 @@ window.onload = function() {
         var Tautor = espacos(livroItem["autor"])
         var exemplares = +livroItem["exemplares"] || 0;
         var emprestados = +livroItem["emprestados"] || 0;
+        console.log(livroItem)
         var TTitulo = espacos(livroItem["titulo"])
         var InforEmprestino =document.getElementById("informacoesEmprestimo")
         
