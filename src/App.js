@@ -12,7 +12,7 @@ function App() {
 
   function atualizar() {
     window.location.reload();
-    alert("Bem-vindo!");
+    
   }
 
 //pesquisar
@@ -22,13 +22,13 @@ function pesquisar() {
   const resultadoDiv = document.getElementById("resultado");
   const livrosDestaqueDiv = document.getElementById("livrosDestaque");
 
-  // Limpa o resultado anterior
+  // Limpa o resultado anterior gdfgdg
   resultadoDiv.innerHTML = "";
   livrosDestaqueDiv.innerHTML = "";
 
   // Filtra os livros com base no título
   const resultadosFiltrados = data.filter((livro) =>
-      livro["TÍTULO"] && livro["TÍTULO"].toLowerCase().includes(termo)
+      livro["TÍTULO "] && livro["TÍTULO "].toLowerCase().includes(termo)
   );
 
   // Exibe os resultados filtrados
