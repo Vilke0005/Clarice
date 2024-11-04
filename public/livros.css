@@ -8,6 +8,7 @@
         background: linear-gradient(#79e4a6, #1bc296);
         height: 3500px;
         font-size: 450%;
+        background-attachment: fixed;
     }
     img {
         left: 10%;
