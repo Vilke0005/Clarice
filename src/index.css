@@ -154,454 +154,21 @@ hr {
     display: inline-block; /* ou block, dependendo do layout desejado */
 }
 
-@media (max-width: 360px){
-    #top1, #top2, #top3, #top4, #top5, #top6, #top7, #top8, #top9, #top10 {
-        text-align: center;
+@media (max-width: 361px){
+    body {
+        margin: 0%;
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(#79e4a6, #1bc296);
+        height: 120vh;
+    }
+    #livrosDestaque {
         position: absolute;
-        width: 60%;
-        height: 50%;
-        margin-top: 5px;
-        top: 15%;
+        width: 100%;
+        height: 90%;
+        
+        
     }
-    #top1 {
-        top: 13%;
-        left: 22%;
-        padding: 0%;
-    }
-    #top2 {
-        top: 70%;
-        left: 22%;
-    }
-    #top3 {
-        top: 124%;
-        left: 22%;
-    }
-    #top4 {
-        top: 179%;
-        left: 22%;
-    }
-    #top5 {
-        top: 234%;
-        left: 22%;
-    }
-    #top6 {
-        top: 289%;
-        left: 22%;
-    }
-    #top7 {
-        top: 344%;
-        left: 22%;
-    }
-    #top8 {
-        top: 399%;
-        left: 22%;
-    }
-    #top9 {
-        top: 454%;
-        left: 22%;
-    }
-    #top10 {
-        top: 509%;
-        left: 22%;
-    }
-    #resultado {
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: flex-end; /* Para garantir que os livros comecem na li*/
-        gap: 16px; 
-        padding: 5px; /* Padding para evitar que os livros toquem as bordas */
-        margin-top: 80px;
-        width: 100%; /* Certifique-se de que ocupa a largura total */
-        max-width: 1300px; /* Limita a largura máxima, se necessário */ /* Espaço acima dos resultados */
-
-    }
-    .livro {
-        margin: 10px 0 10px 30px; /* 10px em cima, 0 à direita, 10px embaixo, 20px à esquerda */
-        padding: 10px;
-        display: inline-block; 
-    }
-    .pesquisa{
-        border: none;
-        background: none;
-        outline: none;
-        padding: 0%;
-        color: #f0f5fb;
-        font-size: 16px;
-        line-height: 40px;
-        width: 240px;
-        transition: 0.5s;
-    }
-    
-    .botaopesquisa{
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: #0a1b2d;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.5s;
-    }
-    
-    .barra:hover > .pesquisa{
-        width: 240px;
-        padding: 0 6px;
-    }
-    .barra{
-        position: absolute;
-        top: 05%;
-        left: 80%;
-        transform: translate(-50%, -50%);
-        background: #0a1b2d;
-        height: 40px;
-        padding: 10px;
-        border-radius: 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    hr {
-        position: relative;
-        top: 8%;
-        border: none; /* Remove a borda padrão */
-        height: 2px; /* Altura da linha */
-        width: 150%;
-        background-color: #333; /* Cor da linha */
-        margin: 20px 0; /* Margem acima e abaixo */
-    }
-}
-
-@media (max-width: 375px){
-    #top1, #top2, #top3, #top4, #top5, #top6, #top7, #top8, #top9, #top10 {
-        text-align: center;
-        position: absolute;
-        width: 60%;
-        height: 50%;
-        margin-top: 5px;
-        top: 15%;
-    }
-    #top1 {
-        top: 20%;
-        left: 22%;
-    }
-    #top2 {
-        top: 70%;
-        left: 22%;
-    }
-    #top3 {
-        top: 124%;
-        left: 22%;
-    }
-    #top4 {
-        top: 179%;
-        left: 22%;
-    }
-    #top5 {
-        top: 234%;
-        left: 22%;
-    }
-    #top6 {
-        top: 289%;
-        left: 22%;
-    }
-    #top7 {
-        top: 344%;
-        left: 22%;
-    }
-    #top8 {
-        top: 399%;
-        left: 22%;
-    }
-    #top9 {
-        top: 454%;
-        left: 22%;
-    }
-    #top10 {
-        top: 509%;
-        left: 22%;
-    }
-    #resultado {
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: flex-end; /* Para garantir que os livros comecem na li*/
-        gap: 16px; 
-        padding: 5px; /* Padding para evitar que os livros toquem as bordas */
-        margin-top: 80px;
-        width: 100%; /* Certifique-se de que ocupa a largura total */
-        max-width: 1300px; /* Limita a largura máxima, se necessário */ /* Espaço acima dos resultados */
-
-    }
-    .livro {
-        margin: 10px 0 10px 30px; /* 10px em cima, 0 à direita, 10px embaixo, 20px à esquerda */
-        padding: 10px;
-        display: inline-block; 
-    }
-    .pesquisa{
-        border: none;
-        background: none;
-        outline: none;
-        padding: 0%;
-        color: #f0f5fb;
-        font-size: 16px;
-        line-height: 40px;
-        width: 240px;
-        transition: 0.5s;
-    }
-    
-    .botaopesquisa{
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: #0a1b2d;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.5s;
-    }
-    
-    .barra:hover > .pesquisa{
-        width: 240px;
-        padding: 0 6px;
-    }
-    .barra{
-        position: absolute;
-        top: 05%;
-        left: 80%;
-        transform: translate(-50%, -50%);
-        background: #0a1b2d;
-        height: 40px;
-        padding: 10px;
-        border-radius: 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    hr {
-        position: relative;
-        top: 8%;
-        border: none; /* Remove a borda padrão */
-        height: 2px; /* Altura da linha */
-        width: 150%;
-        background-color: #333; /* Cor da linha */
-        margin: 20px 0; /* Margem acima e abaixo */
-    }
-}
-
-@media (max-width: 414px){
-    #top1, #top2, #top3, #top4, #top5, #top6, #top7, #top8, #top9, #top10 {
-        text-align: center;
-        position: absolute;
-        width: 60%;
-        height: 50%;
-        margin-top: 5px;
-        top: 15%;
-    }
-    #top1 {
-        top: 20%;
-        left: 22%;
-    }
-    #top2 {
-        top: 70%;
-        left: 22%;
-    }
-    #top3 {
-        top: 124%;
-        left: 22%;
-    }
-    #top4 {
-        top: 179%;
-        left: 22%;
-    }
-    #top5 {
-        top: 234%;
-        left: 22%;
-    }
-    #top6 {
-        top: 289%;
-        left: 22%;
-    }
-    #top7 {
-        top: 344%;
-        left: 22%;
-    }
-    #top8 {
-        top: 399%;
-        left: 22%;
-    }
-    #top9 {
-        top: 454%;
-        left: 22%;
-    }
-    #top10 {
-        top: 509%;
-        left: 22%;
-    }
-    #resultado {
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: flex-end; /* Para garantir que os livros comecem na li*/
-        gap: 16px; 
-        padding: 5px; /* Padding para evitar que os livros toquem as bordas */
-        margin-top: 80px;
-        width: 100%; /* Certifique-se de que ocupa a largura total */
-        max-width: 1300px; /* Limita a largura máxima, se necessário */ /* Espaço acima dos resultados */
-
-    }
-    .livro {
-        margin: 10px 0 10px 30px; /* 10px em cima, 0 à direita, 10px embaixo, 20px à esquerda */
-        padding: 10px;
-        display: inline-block; 
-    }
-    .pesquisa{
-        border: none;
-        background: none;
-        outline: none;
-        padding: 0%;
-        color: #f0f5fb;
-        font-size: 16px;
-        line-height: 40px;
-        width: 240px;
-        transition: 0.5s;
-    }
-    
-    .botaopesquisa{
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: #0a1b2d;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.5s;
-    }
-    
-    .barra:hover > .pesquisa{
-        width: 240px;
-        padding: 0 6px;
-    }
-    .barra{
-        position: absolute;
-        top: 05%;
-        left: 80%;
-        transform: translate(-50%, -50%);
-        background: #0a1b2d;
-        height: 40px;
-        padding: 10px;
-        border-radius: 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-@media (max-width: 390px){
-    #top1, #top2, #top3, #top4, #top5, #top6, #top7, #top8, #top9, #top10 {
-        text-align: center;
-        position: absolute;
-        width: 60%;
-        height: 50%;
-        margin-top: 5px;
-        top: 15%;
-    }
-    #top1 {
-        top: 20%;
-        left: 22%;
-    }
-    #top2 {
-        top: 70%;
-        left: 22%;
-    }
-    #top3 {
-        top: 124%;
-        left: 22%;
-    }
-    #top4 {
-        top: 179%;
-        left: 22%;
-    }
-    #top5 {
-        top: 234%;
-        left: 22%;
-    }
-    #top6 {
-        top: 289%;
-        left: 22%;
-    }
-    #top7 {
-        top: 344%;
-        left: 22%;
-    }
-    #top8 {
-        top: 399%;
-        left: 22%;
-    }
-    #top9 {
-        top: 454%;
-        left: 22%;
-    }
-    #top10 {
-        top: 509%;
-        left: 22%;
-    }
-    #resultado {
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: flex-end; /* Para garantir que os livros comecem na li*/
-        gap: 16px; 
-        padding: 5px; /* Padding para evitar que os livros toquem as bordas */
-        margin-top: 80px;
-        width: 100%; /* Certifique-se de que ocupa a largura total */
-        max-width: 1300px; /* Limita a largura máxima, se necessário */ /* Espaço acima dos resultados */
-
-    }
-    .livro {
-        margin: 10px 0 10px 30px; /* 10px em cima, 0 à direita, 10px embaixo, 20px à esquerda */
-        padding: 10px;
-        display: inline-block; 
-    }
-    .pesquisa{
-        border: none;
-        background: none;
-        outline: none;
-        padding: 0%;
-        color: #f0f5fb;
-        font-size: 16px;
-        line-height: 40px;
-        width: 240px;
-        transition: 0.5s;
-    }
-    
-    .botaopesquisa{
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: #0a1b2d;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.5s;
-    }
-    
-    .barra:hover > .pesquisa{
-        width: 240px;
-        padding: 0 6px;
-    }
-    .barra{
-        position: absolute;
-        top: 05%;
-        left: 80%;
-        transform: translate(-50%, -50%);
-        background: #0a1b2d;
-        height: 40px;
-        padding: 10px;
-        border-radius: 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-@media (max-width: 430px){
     #top1, #top2, #top3, #top4, #top5, #top6, #top7, #top8, #top9, #top10 {
         
         position: absolute;
@@ -609,6 +176,133 @@ hr {
         height: 50%;
         margin-top: 5px;
         top: 15%;
+        left: 0%;
+        
+        
+
+    }
+    #top1 {
+        
+        top: 20%;
+        
+    }
+    #top2 {
+        top: 70%;
+        
+    }
+    #top3 {
+        top: 124%;
+        
+    }
+    #top4 {
+        top: 179%;
+       
+    }
+    #top5 {
+        top: 234%;
+        
+    }
+    #top6 {
+        top: 289%;
+        
+    }
+    #top7 {
+        top: 344%;
+        
+    }
+    #top8 {
+        top: 399%;
+        
+    }
+    #top9 {
+        top: 454%;
+        
+    }
+    #top10 {
+        top: 509%;
+        
+    }
+    #resultado {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: flex-end; /* Para garantir que os livros comecem na li*/
+        gap: 16px; 
+        padding: 5px; /* Padding para evitar que os livros toquem as bordas */
+        margin-top: 80px;
+        width: 100%; /* Certifique-se de que ocupa a largura total */
+        max-width: 1300px; /* Limita a largura máxima, se necessário */ /* Espaço acima dos resultados */
+
+    }
+    .livro {
+        margin: 10px 0 10px 30px; /* 10px em cima, 0 à direita, 10px embaixo, 20px à esquerda */
+        padding: 10px;
+        display: inline-block; 
+    }
+    .pesquisa{
+        border: none;
+        background: none;
+        outline: none;
+        padding: 0%;
+        color: #f0f5fb;
+        font-size: 16px;
+        line-height: 40px;
+        width: 200px;
+        transition: 0.5s;
+        right: 0%;
+        
+    }
+    
+    .botaopesquisa{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #0a1b2d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        right: 100%;
+        right: 0%;
+    }
+    
+    .barra:hover > .pesquisa{
+        width: 240px;
+        padding: 0 6px;
+    }
+    .barra{
+        position: absolute;
+        top: 5%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+        background: #0a1b2d;
+        height: 40px;
+        padding: 10px;
+        border-radius: 40px;
+        display: flex;
+        justify-content: space-between;
+        right: 0%;
+        width: 60%;
+    }
+    hr {
+        position: relative;
+        top: 8%;
+        border: none; /* Remove a borda padrão */
+        height: 2px; /* Altura da linha */
+        width: 150%;
+        background-color: #333; 
+        margin: 20px 0; /* Margem acima e abaixo */
+    }
+}
+
+@media (max-width: 375px){
+    #top1, #top2, #top3, #top4, #top5, #top6, #top7, #top8, #top9, #top10 {
+        
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        margin-top: 5px;
+        top: 15%;
+        left: 0%;
         
 
     }
@@ -676,7 +370,129 @@ hr {
         color: #f0f5fb;
         font-size: 16px;
         line-height: 40px;
-        width: 250%;
+        width: 240px;
+        transition: 0.5s;
+        right: 0%;
+    }
+    
+    .botaopesquisa{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #0a1b2d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        right: 0%;
+    }
+    
+    .barra:hover > .pesquisa{
+        width: 240px;
+        padding: 0 6px;
+    }
+    .barra{
+        position: absolute;
+        top: 05%;
+        right: 0%;
+        width: 60%;
+        transform: translate(-50%, -50%);
+        background: #0a1b2d;
+        height: 40px;
+        padding: 10px;
+        border-radius: 40px;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    hr {
+        position: relative;
+        top: 8%;
+        border: none; /* Remove a borda padrão */
+        height: 2px; /* Altura da linha */
+        width: 150%;
+        background-color: #333; /* Cor da linha */
+        margin: 20px 0; /* Margem acima e abaixo */
+    }
+}
+
+@media (max-width: 414px){
+    #top1, #top2, #top3, #top4, #top5, #top6, #top7, #top8, #top9, #top10 {
+        
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        margin-top: 5px;
+        top: 15%;
+        left: 0%;
+        
+
+    }
+    #top1 {
+        top: 20%;
+        
+    }
+    #top2 {
+        top: 70%;
+        
+    }
+    #top3 {
+        top: 124%;
+        
+    }
+    #top4 {
+        top: 179%;
+       
+    }
+    #top5 {
+        top: 234%;
+        
+    }
+    #top6 {
+        top: 289%;
+        
+    }
+    #top7 {
+        top: 344%;
+        
+    }
+    #top8 {
+        top: 399%;
+        
+    }
+    #top9 {
+        top: 454%;
+        
+    }
+    #top10 {
+        top: 509%;
+        
+    }
+    #resultado {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: flex-end; /* Para garantir que os livros comecem na li*/
+        gap: 16px; 
+        padding: 5px; /* Padding para evitar que os livros toquem as bordas */
+        margin-top: 80px;
+        width: 100%; /* Certifique-se de que ocupa a largura total */
+        max-width: 1300px; /* Limita a largura máxima, se necessário */ /* Espaço acima dos resultados */
+
+    }
+    .livro {
+        margin: 10px 0 10px 30px; /* 10px em cima, 0 à direita, 10px embaixo, 20px à esquerda */
+        padding: 10px;
+        display: inline-block; 
+    }
+    .pesquisa{
+        border: none;
+        background: none;
+        outline: none;
+        padding: 0%;
+        color: #f0f5fb;
+        font-size: 16px;
+        line-height: 40px;
+        width: 240px;
         transition: 0.5s;
     }
     
@@ -698,7 +514,228 @@ hr {
     .barra{
         position: absolute;
         top: 05%;
-        left: 90%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        background: #0a1b2d;
+        height: 40px;
+        padding: 10px;
+        border-radius: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (max-width: 390px){
+    #top1, #top2, #top3, #top4, #top5, #top6, #top7, #top8, #top9, #top10 {
+        
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        margin-top: 5px;
+        top: 15%;
+        left: 0%;
+        
+
+    }
+    #top1 {
+        top: 20%;
+        
+    }
+    #top2 {
+        top: 70%;
+        
+    }
+    #top3 {
+        top: 124%;
+        
+    }
+    #top4 {
+        top: 179%;
+       
+    }
+    #top5 {
+        top: 234%;
+        
+    }
+    #top6 {
+        top: 289%;
+        
+    }
+    #top7 {
+        top: 344%;
+        
+    }
+    #top8 {
+        top: 399%;
+        
+    }
+    #top9 {
+        top: 454%;
+        
+    }
+    #top10 {
+        top: 509%;
+        
+    }
+    #resultado {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: flex-end; /* Para garantir que os livros comecem na li*/
+        gap: 16px; 
+        padding: 5px; /* Padding para evitar que os livros toquem as bordas */
+        margin-top: 80px;
+        width: 100%; /* Certifique-se de que ocupa a largura total */
+        max-width: 1300px; /* Limita a largura máxima, se necessário */ /* Espaço acima dos resultados */
+
+    }
+    .livro {
+        margin: 10px 0 10px 30px; /* 10px em cima, 0 à direita, 10px embaixo, 20px à esquerda */
+        padding: 10px;
+        display: inline-block; 
+    }
+    .pesquisa{
+        border: none;
+        background: none;
+        outline: none;
+        padding: 0%;
+        color: #f0f5fb;
+        font-size: 16px;
+        line-height: 40px;
+        width: 240px;
+        transition: 0.5s;
+    }
+    
+    .botaopesquisa{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #0a1b2d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+    }
+    
+    .barra:hover > .pesquisa{
+        width: 240px;
+        padding: 0 6px;
+    }
+    .barra{
+        position: absolute;
+        top: 05%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        background: #0a1b2d;
+        height: 40px;
+        padding: 10px;
+        border-radius: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (max-width: 430px){
+    #top1, #top2, #top3, #top4, #top5, #top6, #top7, #top8, #top9, #top10 {
+        
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        margin-top: 5px;
+        top: 15%;
+        left: 0%;
+        
+
+    }
+    #top1 {
+        top: 20%;
+        
+    }
+    #top2 {
+        top: 70%;
+        
+    }
+    #top3 {
+        top: 124%;
+        
+    }
+    #top4 {
+        top: 179%;
+       
+    }
+    #top5 {
+        top: 234%;
+        
+    }
+    #top6 {
+        top: 289%;
+        
+    }
+    #top7 {
+        top: 344%;
+        
+    }
+    #top8 {
+        top: 399%;
+        
+    }
+    #top9 {
+        top: 454%;
+        
+    }
+    #top10 {
+        top: 509%;
+        
+    }
+    #resultado {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: flex-end; /* Para garantir que os livros comecem na li*/
+        gap: 16px; 
+        padding: 5px; /* Padding para evitar que os livros toquem as bordas */
+        margin-top: 80px;
+        width: 100%; /* Certifique-se de que ocupa a largura total */
+        max-width: 1300px; /* Limita a largura máxima, se necessário */ /* Espaço acima dos resultados */
+
+    }
+    .livro {
+        margin: 10px 0 10px 30px; /* 10px em cima, 0 à direita, 10px embaixo, 20px à esquerda */
+        padding: 10px;
+        display: inline-block; 
+    }
+    .pesquisa{
+        right: 0%;
+        border: none;
+        background: none;
+        outline: none;
+        padding: 0%;
+        color: #f0f5fb;
+        font-size: 16px;
+        line-height: 40px;
+        width: 250px;
+        transition: 0.5s;
+    }
+    
+    .botaopesquisa{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #0a1b2d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+    }
+    
+    .barra:hover > .pesquisa{
+        width: 240px;
+        padding: 0 6px;
+    }
+    .barra{
+        position: absolute;
+        top: 05%;
+        left: 60%;
         transform: translate(-50%, -50%);
         background: #0a1b2d;
         height: 40px;
@@ -712,52 +749,55 @@ hr {
 
 @media (max-width: 344px){
     #top1, #top2, #top3, #top4, #top5, #top6, #top7, #top8, #top9, #top10 {
-        text-align: center;
+        
         position: absolute;
-        width: 60%;
+        width: 100%;
         height: 50%;
         margin-top: 5px;
         top: 15%;
+        left: 0%;
+        
+
     }
     #top1 {
         top: 20%;
-        left: 22%;
+        
     }
     #top2 {
         top: 70%;
-        left: 22%;
+        
     }
     #top3 {
         top: 124%;
-        left: 22%;
+        
     }
     #top4 {
         top: 179%;
-        left: 22%;
+       
     }
     #top5 {
         top: 234%;
-        left: 22%;
+        
     }
     #top6 {
         top: 289%;
-        left: 22%;
+        
     }
     #top7 {
         top: 344%;
-        left: 22%;
+        
     }
     #top8 {
         top: 399%;
-        left: 22%;
+        
     }
     #top9 {
         top: 454%;
-        left: 22%;
+        
     }
     #top10 {
         top: 509%;
-        left: 22%;
+        
     }
     #resultado {
         display: flex; 
