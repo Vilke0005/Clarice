@@ -4,6 +4,7 @@ body{
     width: 100vw;
     background: linear-gradient(#79e4a6, #1bc296);
     height: 120vh;
+    background-attachment: fixed;
 }
 img {
     left: 10%;
@@ -303,6 +304,7 @@ hr {
         margin-top: 5px;
         top: 15%;
         left: 0%;
+        
         
 
     }
