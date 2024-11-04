@@ -155,7 +155,7 @@ hr {
     display: inline-block; /* ou block, dependendo do layout desejado */
 }
 
-@media (max-width: 361px){
+@media (max-width: 360px){
     body {
         margin: 0%;
         height: 100vh;
@@ -282,7 +282,7 @@ hr {
         display: flex;
         justify-content: space-between;
         right: 0%;
-        width: 60%;
+        width: 70%;
     }
     hr {
         position: relative;
