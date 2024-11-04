@@ -18,7 +18,7 @@ function App() {
 //pesquisar
 
 function pesquisar() {
-  const termo = document.getElementById("pesquisa").value.toLowerCase();
+  const termo = document.getElementById("pesquisa").value.trim().toLowerCase();
   const resultadoDiv = document.getElementById("resultado");
   const livrosDestaqueDiv = document.getElementById("livrosDestaque");
 
@@ -167,9 +167,15 @@ function Livro(item) {
     if (!loading) {
       Destaque(data)
       const button = document.getElementById('logo');
-      const pesquisar = document.getElementById("pesquisa");
-      if (pesquisar){
-        pesquisar.onclick = pesquisar;
+      const pesquisarInput = document.getElementById("pesquisa");
+
+      if (pesquisarInput) {
+        // Executa a pesquisa ao pressionar Enter
+        pesquisarInput.addEventListener("keydown", function(event) {
+          if (event.key === "Enter") {
+            pesquisar();
+          }
+        });
       }
 
       if (button) {
@@ -180,8 +186,8 @@ function Livro(item) {
         if (button) {
           button.onclick = null;
         }
-        if(pesquisar) {
-          pesquisar.onclick = null;
+        if (pesquisarInput) {
+          pesquisarInput.removeEventListener("keydown", pesquisar);
         }
       };
     }
