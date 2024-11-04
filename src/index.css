@@ -427,8 +427,6 @@ hr {
         margin-top: 5px;
         top: 15%;
         left: 0%;
-        
-
     }
     #top1 {
         top: 20%;
@@ -499,6 +497,7 @@ hr {
     }
     
     .botaopesquisa{
+        right: 0%;
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -515,8 +514,9 @@ hr {
     }
     .barra{
         position: absolute;
-        top: 05%;
-        left: 80%;
+        top: 5%;
+        right: 0%;
+        width: 58%;
         transform: translate(-50%, -50%);
         background: #0a1b2d;
         height: 40px;
@@ -524,7 +524,6 @@ hr {
         border-radius: 40px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
     }
 }
 
@@ -606,6 +605,7 @@ hr {
         line-height: 40px;
         width: 240px;
         transition: 0.5s;
+        right: 0%;
     }
     
     .botaopesquisa{
@@ -617,6 +617,7 @@ hr {
         justify-content: center;
         align-items: center;
         transition: 0.5s;
+        right: 0%;
     }
     
     .barra:hover > .pesquisa{
@@ -625,7 +626,7 @@ hr {
     }
     .barra{
         position: absolute;
-        top: 05%;
+        top: 5%;
         left: 80%;
         transform: translate(-50%, -50%);
         background: #0a1b2d;
@@ -634,7 +635,7 @@ hr {
         border-radius: 40px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        right: 0%;
     }
 }
 
