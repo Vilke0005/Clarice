@@ -73,7 +73,14 @@ window.onload = function() {
         <br>
         <h3 id="descricao">Descrição</h3>
         <hr>
-        <p id="textos">${Tdescricao}
+        <div class="container" onclick="toggleText()">
+            <h3 id="texto-curto"></h3>
+            <p id="texto-completo" style="display: none;">
+            ${Tdescricao}
+            </p>
+            <span id="toggle-btn">Ver mais</span>
+        </div>
+
         <h2 id="titulo3">Informações de emprestimo</h2>
         <hr>
         <h3>Exemplares: ${exemplares}</h3>
@@ -88,3 +95,19 @@ window.onload = function() {
         document.getElementById('livroDetalhes').textContent = 'Nenhum dado disponível.';
     }
 };
+
+function toggleText() {
+    const textoCurto = document.getElementById("texto-curto");
+    const textoCompleto = document.getElementById("texto-completo");
+    const toggleBtn = document.getElementById("toggle-btn");
+
+    if (textoCompleto.style.display === "none") {
+        textoCompleto.style.display = "block";
+        textoCurto.style.display = "none";
+        toggleBtn.textContent = "Ver menos";
+    } else {
+        textoCompleto.style.display = "none";
+        textoCurto.style.display = "block";
+        toggleBtn.textContent = "Ver mais";
+    }
+}

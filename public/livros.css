@@ -7,6 +7,7 @@
         width: 100vw;
         background: linear-gradient(#79e4a6, #1bc296);
         height: 3500px;
+        font-size: 450%;
     }
     img {
         left: 10%;
@@ -17,8 +18,8 @@
         margin-top: 4px;
     }
     hr {
-        position: relative;
-        top: 8%;
+        position: absolute;
+        top: 90px;
         border: none; /* Remove a borda padrão */
         height: 2px; /* Altura da linha */
         background-color: #333; /* Cor da linha */
@@ -29,8 +30,8 @@
         border-radius: 20%;
         left: 6%;
         top: 1%;
-        width: 10%;
-        height: 8%;
+        width: 20%;
+        height: 23%;
         transition: transform 0.3s, box-shadow 0.3s; /* Efeito de transição */
     }
     
@@ -42,7 +43,7 @@
     #imagem {
         position: absolute;
         left: 5%;
-        top: 13%;
+        top: 27%;
         width: 90%;
         height: 80%;
         background-color: black;
@@ -62,7 +63,7 @@
     
     #titulo {
         position: absolute;
-        top: 95%;
+        top: 120%;
         left: 5%;
         width: 90%;
         text-align: center;
@@ -75,21 +76,23 @@
     
     #informacoes {
         position: absolute;
-        top: 105%;
+        top: 160%;
         left: 2%;
         width: 90%;
         margin-left: 3%;
         margin-right: 3%;
         background-color: #1bc296;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5)
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        text-indent: 5%;
     }
+   
     #titulo2, #descricao, #titulo3{
         text-align: center;
     }
     
     #disponivel {
         position: absolute;
-        top: 100%;
+        top: 110%;
         left: 5%;
         width: 90%;
         
@@ -101,7 +104,7 @@
     
     #indisponivel {
         position: absolute;
-        top: 100%;
+        top: 110%;
         left: 5%;
     
         width: 90%;
@@ -109,6 +112,20 @@
         background-color: rgb(230, 112, 44);
         
     }
+    .container {
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        padding: 10px;
+        
+        border-radius: 5px;
+        text-align: left;
+    }
+    
+    #toggle-btn {
+        cursor: pointer;
+    }
+    
 }
 }
 @media (min-width: 1000px){
