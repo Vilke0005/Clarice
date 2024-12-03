@@ -147,7 +147,7 @@
     }
     hr {
         position: relative;
-        top: 8%;
+        top: 6%;
         border: none; /* Remove a borda padrão */
         height: 2px; /* Altura da linha */
         background-color: #333; /* Cor da linha */

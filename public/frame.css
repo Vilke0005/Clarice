@@ -1,0 +1,15 @@
+/* Torna o layout responsivo dentro do iframe */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Impede as barras de rolagem */
+    width: 100vw;     /* Define a largura para 100% da largura da janela do iframe */
+    height: 100vh;    /* Define a altura para 100% da altura da janela do iframe */
+  }
+  
+  .container {
+    max-width: 100%; /* Adapta o conteúdo para a largura do iframe */
+    max-height: 100%; /* Adapta o conteúdo para a altura do iframe */
+    overflow: auto;   /* Adiciona rolagem interna se o conteúdo for maior que o iframe */
+  }
+  
